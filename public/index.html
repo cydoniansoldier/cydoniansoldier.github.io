@@ -1,87 +1,99 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-  <title>Bootstrap 5 Website Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-  <style>
-  .fakeimg {
-    height: 200px;
-    background: #aaa;
-  }
-  /* .choices {
+  <head>
+    <title>Bootstrap 5 Website Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .fakeimg {
+        height: 200px;
+        background: #aaa;
+      }
+      /* .choices {
     color: black;
   } */
-  #choice1 {
-    background-color: white;
-    color: black;
-  }
-  #choice1.hover {
-    background-color: black;
-    color: white;
-  }
-  #choice2 {
-    background-color: white;
-    color: black;
-  }
-  #choice2.hover {
-    background-color: black;
-    color: white;
-  }
-  </style>
-  <script src="script.js"></script>
-  <script src="json.js"></script>
-
-</head>
-<body>
-<div class="p-3 bg-primary text-white text-center">
-  <h1>My First Bootstrap 5 Page</h1>
-  <p>Resize this responsive page to see the effect!</p> 
-</div>
-
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <div class="container-fluid">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Active</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<div class="container mt-5">
-  <div class="row">
-    <div id="choice1" class="choices col-sm-6" onmouseenter="colorChange1()" onmouseleave="colorChange1()" onclick="chosen(this)">
-      <h2 id="p1Num"></h2>
-      <h3 id="p1Title"></h3>
-      <div id="img1" class="fakeimg">Fake Image</div>
-      <h4 id="p1Elo" class="text-center mt-2"></h4>
+      #choice1 {
+        background-color: white;
+        color: black;
+      }
+      #choice1.hover {
+        background-color: black;
+        color: white;
+      }
+      #choice2 {
+        background-color: white;
+        color: black;
+      }
+      #choice2.hover {
+        background-color: black;
+        color: white;
+      }
+    </style>
+    <script src="init.js"></script>
+    <script src="script.js"></script>
+    <!-- <script src="json.js"></script> -->
+  </head>
+  <body>
+    <div class="p-3 bg-primary text-white text-center">
+      <h1>My First Bootstrap 5 Page</h1>
+      <p>Resize this responsive page to see the effect!</p>
     </div>
-    <div id="choice2" class="choices col-sm-6" onmouseenter="colorChange2()" onmouseleave="colorChange2()" onclick="chosen(this)">
-        <h2 id="p2Num"></h2>
-        <h3 id="p2Title"></h3>
-        <div id="img2" class="fakeimg">Fake Image</div>
-        <h4 id="p2Elo" class="text-center mt-2"></h4>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div
+          id="choice1"
+          class="choices col-sm-6"
+          onmouseenter="colorChange1()"
+          onmouseleave="colorChange1()"
+          onclick="chosen(this)"
+        >
+          <h2 id="p1Num"></h2>
+          <h3 id="p1Title"></h3>
+          <div id="img1" class="fakeimg">Fake Image</div>
+          <h4 id="p1Elo" class="text-center mt-2"></h4>
+        </div>
+        <div
+          id="choice2"
+          class="choices col-sm-6"
+          onmouseenter="colorChange2()"
+          onmouseleave="colorChange2()"
+          onclick="chosen(this)"
+        >
+          <h2 id="p2Num"></h2>
+          <h3 id="p2Title"></h3>
+          <div id="img2" class="fakeimg">Fake Image</div>
+          <h4 id="p2Elo" class="text-center mt-2"></h4>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
-<div class="mt-5 p-4 bg-dark text-white text-center">
-  <p>Footer</p>
-</div>
-
-
-
-</body>
+    <div class="mt-5 p-4 bg-dark text-white text-center">
+      <p>Footer</p>
+    </div>
+  </body>
 </html>

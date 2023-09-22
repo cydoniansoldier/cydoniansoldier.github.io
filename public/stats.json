@@ -4,71 +4,101 @@
       "no": 1,
       "title": "Ep. 1",
       "description": "lorem ipsum",
-      "elo": 1000,
-      "tier": 3
+      "elo": 1058.4,
+      "rank": "none",
+      "play_count": 0,
+      "k_factor": 40,
+      "ranked": false
     },
     {
       "no": 2,
       "title": "Ep. 2",
       "description": "lorem ipsum",
-      "elo": 1200,
-      "tier": 3
+      "elo": 1203.1,
+      "rank": "none",
+      "play_count": 0,
+      "k_factor": 40,
+      "ranked": false
     },
     {
       "no": 3,
       "title": "Ep. 3",
       "description": "lorem ipsum",
-      "elo": 985,
-      "tier": 3
+      "elo": 1058.4,
+      "rank": "none",
+      "play_count": 0,
+      "k_factor": 40,
+      "ranked": false
     },
     {
       "no": 4,
       "title": "Ep. 4",
       "description": "lorem ipsum",
-      "elo": 1200,
-      "tier": 3
+      "elo": 1057.1,
+      "rank": "none",
+      "play_count": 0,
+      "k_factor": 40,
+      "ranked": false
     },
     {
       "no": 5,
       "title": "Ep. 5",
       "description": "lorem ipsum",
-      "elo": 1000,
-      "tier": 3
+      "elo": 1080.2,
+      "rank": "none",
+      "play_count": 0,
+      "k_factor": 40,
+      "ranked": false
     },
     {
       "no": 6,
       "title": "Ep. 6",
       "description": "lorem ipsum",
-      "elo": 1200,
-      "tier": 3
+      "elo": 1197.6,
+      "rank": "none",
+      "play_count": 0,
+      "k_factor": 40,
+      "ranked": false
     },
     {
       "no": 7,
       "title": "Ep. 7",
       "description": "lorem ipsum",
-      "elo": 1000,
-      "tier": 3
+      "elo": 957.1,
+      "rank": "none",
+      "play_count": 0,
+      "k_factor": 40,
+      "ranked": false
     },
     {
       "no": 8,
       "title": "Ep. 8",
       "description": "lorem ipsum",
-      "elo": 1200,
-      "tier": 3
+      "elo": 1150.8,
+      "rank": "none",
+      "play_count": 0,
+      "k_factor": 40,
+      "ranked": false
     },
     {
       "no": 9,
       "title": "Ep. 9",
       "description": "lorem ipsum",
-      "elo": 1015,
-      "tier": 3
+      "elo": 1010.1,
+      "rank": "none",
+      "play_count": 0,
+      "k_factor": 40,
+      "ranked": false
     },
     {
       "no": 10,
       "title": "Ep. 10",
       "description": "lorem ipsum",
-      "elo": 1200,
-      "tier": 3
+      "elo": 1227.2,
+      "rank": "none",
+      "play_count": 0,
+      "k_factor": 40,
+      "ranked": false
     }
   ]
 }

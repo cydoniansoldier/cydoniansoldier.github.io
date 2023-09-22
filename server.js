@@ -18,8 +18,6 @@ app.use(bodyParser.text());
 app.use(express.json());
 
 app.post("/", function (req, res) {
-  if (req.is("application/json")) {
-  }
   if (req.is("text/plain") && req.body == "random") {
     const dataJSON = readFileSync("./public/stats.json", "utf8");
     const data = JSON.parse(dataJSON);
@@ -28,7 +26,7 @@ app.post("/", function (req, res) {
     let p2 = 0;
 
     do p2 = Math.floor(Math.random() * data.episodes.length);
-    while (p2 == p1);
+    while (p2 == p1 || Math.abs(data.episodes[p1].elo - data.episodes[p2].elo) > 200);
 
     choice1 = data.episodes[p1];
     choice2 = data.episodes[p2];
@@ -44,6 +42,10 @@ app.post("/", function (req, res) {
   } else if (req.is("text/plain") && req.body == "img2") {
     elo(choice2, choice1, prob2, prob1);
     res.send("end");
+  // } else if (req.is("text/plain") && req.body == "drawer") {
+  //   console.log("draw");
+  //   // elo(choice2, choice1, prob2, prob1);
+    // res.send("end");
   }
   res.end();
 });
@@ -54,6 +56,7 @@ app.listen(PORT, function (err) {
 });
 
 function elo(winner, loser, prob_win, prob_lose) {
+  console.log(a);
   let rate_win = parseFloat(winner.elo + k * (1 - prob_win)).toFixed(1);
   winner.elo = rate_win;
   let rate_lose = parseFloat(loser.elo + k * (0 - prob_lose)).toFixed(1);
@@ -68,7 +71,6 @@ function elo(winner, loser, prob_win, prob_lose) {
       ep.elo = parseFloat(loser.elo);
     }
   }
-  console.log(episodes);
   fs.writeFileSync(
     "./public/stats.json",
     JSON.stringify(episodes, null, 2),
@@ -79,3 +81,17 @@ function elo(winner, loser, prob_win, prob_lose) {
     }
   );
 }
+var a = 0;
+var interval = setInterval(function() {
+  a++;
+  if (a == 10){
+    console.log("CLEAR_TIMER");
+    //
+    //
+    //
+    a = 0;
+  }
+  // console.log(a);
+}, 1000);
+
+// clearInterval(interval);

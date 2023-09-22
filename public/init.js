@@ -8,7 +8,6 @@ function init() {
   })
     .then((response) => response.json())
     .then((json) => {
-      console.log(json);
       document.getElementById("p1Num").innerHTML = json.choice1.no;
       document.getElementById("p1Title").innerHTML = json.choice1.title;
       document.getElementById("p1Elo").innerHTML = "Rank: " + json.choice1.elo;
@@ -19,10 +18,8 @@ function init() {
 
       let prob1 =
         1 / (1 + Math.pow(10, (json.choice2.elo - json.choice1.elo) / 400));
-      console.log(prob1);
       let prob2 =
         1 / (1 + Math.pow(10, (json.choice1.elo - json.choice2.elo) / 400));
-      console.log(prob2);
     });
 }
 
@@ -37,10 +34,8 @@ function chosen(sth) {
     .then((response) => response.text())
     .then((data) => {
       if (data == "end") {
-        console.log("jest");
         init();
       }
-      console.log(data);
     });
 }
 init();
